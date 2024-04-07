@@ -3,6 +3,7 @@ title: "Sending email in asp.net core MVC"
 datePublished: Thu Apr 04 2024 01:43:52 GMT+0000 (Coordinated Universal Time)
 cuid: clukkpq70000008jn401sa1sc
 slug: sending-email-in-aspnet-core-mvc
+tags: mail, aspnet-mail, send-email-aspnet
 
 ---
 
@@ -35,13 +36,21 @@ htmlCopy code@{
 </form>
 ```
 
-2. Create a controller action to handle the form submission:
+2. Install MailKit package on Nuget package manager console.
+    
+    `PM> Install-Package MailKit`
+    
+3. Create a controller action to handle the form submission:
     
 
 In your controller (e.g., `EmailController`), create an action method to handle the form submission. Here's an example:
 
 ```csharp
-csharpCopy codeusing Microsoft.AspNetCore.Mvc;
+using System.Net.Mail; 
+using System.Net; 
+using MailKit; 
+using MailKit.Net.Smtp;
+using Microsoft.AspNetCore.Mvc;
 using System.Net;
 using System.Net.Mail;
 using System.Threading.Tasks;
@@ -54,49 +63,49 @@ public class EmailController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> SendEmail(string toEmail, string subject, string body)
-    {
-        if (string.IsNullOrEmpty(toEmail) || string.IsNullOrEmpty(subject) || string.IsNullOrEmpty(body))
-        {
-            ModelState.AddModelError("", "Please provide all required fields.");
-            return View();
-        }
+    public IActionResult SendEmail(string toEmail, string subject, string body)
+         {
+             if (string.IsNullOrEmpty(toEmail) || string.IsNullOrEmpty(subject) || string.IsNullOrEmpty(body))
+             {
+                 ModelState.AddModelError("", "Please provide all required fields.");
+                 return View(); // Consider returning appropriate view here.
+             }
 
-        try
-        {
-            var smtpClient = new SmtpClient
-            {
-                Host = "smtp.gmail.com",
-                Port = 587,
-                EnableSsl = true,
-                Credentials = new NetworkCredential("your_email@gmail.com", "your_password")
-            };
+             try
+             {
+                 var email = new MimeMessage();
+                 email.From.Add(new MailboxAddress("Sender Name", "sudipbhandari67@gmail.com"));
+                 email.To.Add(new MailboxAddress("Receiver Name", toEmail));
+                 email.Subject = subject;
+                 email.Body = new TextPart("plain")
+                 {
+                     Text = body
+                 };
 
-            using (var message = new MailMessage("your_email@gmail.com", toEmail))
-            {
-                message.Subject = subject;
-                message.Body = body;
-                message.IsBodyHtml = true;
+                 using (var smtp = new MailKit.Net.Smtp.SmtpClient())
+                 {
+                     smtp.Connect("smtp.gmail.com", 587, false);
+                     smtp.Authenticate("sender's_email@gmail.com", "third party app password");
+                     smtp.Send(email);
+                     smtp.Disconnect(true);
+                 }
 
-                await smtpClient.SendMailAsync(message);
-            }
+                 return View("SendEmail"); // Return success view
+             }
+             catch (Exception ex)
+             {
+                 Console.WriteLine(ex.ToString());
+                 ModelState.AddModelError("", $"Failed to send email: {ex.Message}");
+                 return View(); // Consider returning appropriate view here.
+             }
 
-            return RedirectToAction("EmailSent");
-        }
-        catch (Exception ex)
-        {
-            ModelState.AddModelError("", $"Failed to send email: {ex.Message}");
-            return View();
-        }
-    }
+         }
+     }
+ }
 
-    public IActionResult EmailSent()
-    {
-        return View();
-    }
 }
 ```
 
-Replace `"`[`your_email@gmail.com`](mailto:your_email@gmail.com)`"` and `"your_password"` with your Gmail email address and password respectively.
+Replace `"sender's_email@gmail.com"` and `"third party app password"` with your Gmail email address and password respectively. In case of gmail you need to create app passwords
 
 With these steps, you've created a view with a form for sending emails and a controller action to handle the form submission. When the form is submitted, the data is passed directly to the `SendEmail` action, which sends the email using Gmail's SMTP server.
