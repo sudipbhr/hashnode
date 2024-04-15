@@ -109,7 +109,7 @@ tags: authentication, aspnet-core
     On default lets assign a role of "Creator " when the user is created on the file Register.cshtml.cs Add line to assign the role  
     `await _userManager.AddToRoleAsync(user, "Creator");`
     
-    ```xml
+    ```css
      public async Task<IActionResult> OnPostAsync(string returnUrl = null)
      {
          returnUrl ??= Url.Content("~/");
