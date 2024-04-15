@@ -7,7 +7,7 @@ tags: authentication, aspnet-core
 
 ---
 
-1. **Use** `AddRoles<IdentityRole>` **to add role management capabilities.**
+1. **Use**`AddRoles<IdentityRole>`**to add role management capabilities.**
     
     ```csharp
     builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
@@ -86,7 +86,7 @@ tags: authentication, aspnet-core
     
 5. We can also check the user's role in the templates and show the page according to the role
     
-    ```csharp
+    ```xml
     @using Microsoft.AspNetCore.Identity
     @inject SignInManager<IdentityUser> SignInManager
     @inject UserManager<IdentityUser> UserManager
