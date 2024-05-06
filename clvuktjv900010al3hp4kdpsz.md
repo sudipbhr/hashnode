@@ -116,7 +116,6 @@ Understanding **init** method
  def __init__(self, length=0, breadth=0):
         self.length = length
         self.breadth = breadth
-        Room.num_rooms += 1
 ```
 
 It is the constructor of the class Room. Meaning it is initialized everytime when the class is called(when object is created)
@@ -153,4 +152,49 @@ room1.print_details()
 print()
 room2.print_details()
 print()
+```
+
+**Inheritance:**
+
+```python
+class Room:
+    # Class attribute
+    num_rooms = 0
+
+    # Constructor
+    def __init__(self, length=0, breadth=0):
+        self.length = length
+        self.breadth = breadth
+        Room.num_rooms += 1
+
+    # Instance methods
+    def area(self):
+        return self.length * self.breadth
+
+    def perimeter(self):
+        return 2 * (self.length + self.breadth)
+
+    def print_details(self):
+        print(f"Room dimensions: {self.length} x {self.breadth} meters")
+        print(f"Area: {self.area()} square meters")
+        print(f"Perimeter: {self.perimeter()} meters")
+
+# Child class inheriting from Room
+class Bedroom(Room):
+    def __init__(self, length, breadth, num_beds):
+        super().__init__(length, breadth)
+        self.num_beds = num_beds
+
+    def print_details(self):
+        super().print_details()
+        print(f"Number of beds: {self.num_beds}")
+
+# Creating instances of the classes
+room1 = Room(5, 4)
+bedroom1 = Bedroom(4, 3, 2)
+
+# Calling instance methods
+room1.print_details()
+print()
+bedroom1.print_details()
 ```
