@@ -56,41 +56,6 @@ slug: varibles-in-python
     * Example: a, b, c = 1, 2, "three"
         
 
-## Variable Data Types
-
-* Python is a dynamically typed language
-    
-* Variables can hold values of different data types
-    
-    * Numbers (int, float, complex)
-        
-        * Example: x = 5, y = 2.7
-            
-    * Strings
-        
-        * Example: name = "John"
-            
-    * Booleans
-        
-        * Example: is\_true = True
-            
-    * Sequences (list, tuple, range)
-        
-        * Example: my\_list = \[1,2,3\], vowels = ('a','e','i')
-            
-    * Mapped (dict)
-        
-        * Example: person = {'name': 'John', 'age': 30}
-            
-    * Binary (bytes, bytearray)
-        
-        * Example: bin\_data = b'hello'
-            
-    * None
-        
-        * Example: null\_var = None
-            
-
 ## Type Conversion (Casting)
 
 * Python interprets literals based on rules of data types
@@ -139,6 +104,6 @@ slug: varibles-in-python
         
         * Example: ComplexNumber
             
-    * under\_scores for functions and variables
+    * under\_scores for functions and variables(snake case)
         
         * Example: calculate\_area, init, print\_students
