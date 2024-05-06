@@ -1,8 +1,13 @@
 ---
 title: "Getting started with Django"
+seoTitle: "Getting started with Django"
+seoDescription: "Getting started with Django"
 datePublished: Mon May 06 2024 16:28:26 GMT+0000 (Coordinated Universal Time)
 cuid: clvv6ejrb00050ajw9kmwc6hh
 slug: getting-started-with-django
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1715014721248/8d83ea70-5c1d-4fdf-a31c-341912f8cee5.png
+ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1715014760009/bd68299c-616b-4ef6-8d41-e7ca2dbd9021.png
+tags: python, devops, install-django
 
 ---
 
