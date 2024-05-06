@@ -70,7 +70,7 @@ Python supports the creation of anonymous functions (lambda functions). These ar
 
 ```python
 square = lambda x: x ** 2
-print(square(5)) 
+print(square(5))
 ```
 
 ## Python Classes/Objects
@@ -83,11 +83,11 @@ A Class is like an object constructor, or a "blueprint" for creating objects.
 
 ## Define Python Class
 
-We use the `class` [keyword to cr](https://www.programiz.com/python-programming/keywords-identifier)eate a class i[n Pytho](https://www.programiz.com/python-programming/keywords-identifier)n. For example,
+We use the `class`[keyword to cr](https://www.programiz.com/python-programming/keywords-identifier)eate a class i[n Pytho](https://www.programiz.com/python-programming/keywords-identifier)n. For example,
 
 ```python
 class ClassName:
-    # class definition 
+    # class definition
 ```
 
 Here, we have created a class named `ClassNam`[`e`.](https://www.programiz.com/python-programming/keywords-identifier)
@@ -95,33 +95,62 @@ Here, we have created a class named `ClassNam`[`e`.](https://www.programiz.com/p
 [Let](https://www.programiz.com/python-programming/keywords-identifier)'s see an example,
 
 ```python
-class Bike:
-    name = ""
-    gear = 0
+class Room:
+    length = 0
+    breadth = 0
+
+    def area(self):
+        return self.length * self.breadth
 ```
 
-1. `Bike` - the name of the class
+1. `Room` - the name of the class
     
-2. `nam`[`e/gear`](https://www.programiz.com/python-programming/keywords-identifier) \- [variabl](https://www.programiz.com/python-programming/keywords-identifier)es inside the class with [default](https://www.programiz.com/python-programming/keywords-identifier) values `""` and **0** respectively.
+2. `length and breadth` are the attributes of the class
     
+3. `area` is the method of the class
+    
+
+Understanding **init** method
 
 ```python
-# create a class
+ def __init__(self, length=0, breadth=0):
+        self.length = length
+        self.breadth = breadth
+        Room.num_rooms += 1
+```
+
+It is the constructor of the class Room. Meaning it is initialized everytime when the class is called(when object is created)
+
+```python
 class Room:
-    length = 0.0 #attribute length
-    breadth = 0.0 #attribute breadth
-    
-    # method to calculate area
-    def calculate_area(self):
-        print("Area of Room =", self.length * self.breadth)
+ 
 
-# create object of Room class
-study_room = Room()
+    # Constructor
+    def __init__(self, length=0, breadth=0):
+        self.length = length
+        self.breadth = breadth
+        
+    # Instance methods
+    def area(self):
+        return self.length * self.breadth
 
-# assign values to all the properties 
-study_room.length = 42.5
-study_room.breadth = 30.8
+    def perimeter(self):
+        return 2 * (self.length + self.breadth)
 
-# access method inside class
-study_room.calculate_area()
+    def print_details(self):
+        print(f"Room dimensions: {self.length} x {self.breadth} meters")
+        print(f"Area: {self.area()} square meters")
+        print(f"Perimeter: {self.perimeter()} meters")
+
+ 
+
+# Creating instances (objects) of the Room class
+room1 = Room(5, 4)
+room2 = Room(3, 3)
+
+# Calling instance methods
+room1.print_details()
+print()
+room2.print_details()
+print()
 ```
