@@ -6,8 +6,6 @@ slug: getting-started-with-django
 
 ---
 
-Prerequisites of installing django
-
 1. Install Python
     
     ```python
@@ -18,4 +16,65 @@ Prerequisites of installing django
     
     ```python
     pip --version
+    ```
+    
+    if PIP is not installed install by
+    
+    ```python
+    curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+    ```
+    
+    ```python
+    python get-pip.py
+    ```
+    
+
+4. Creating a virtual environment
+    
+    ```python
+    py -m venv myworld
+    ```
+    
+    Then you have to activate the environment, by typing this command:
+    
+    Windows:
+    
+    ```python
+    myworld\Scripts\activate.bat
+    ```
+    
+    Unix/MacOS:
+    
+    ```python
+    source myworld/bin/activate
+    ```
+    
+5. Install Django
+    
+    ```python
+    python -m pip install Django
+    ```
+    
+    Check django version
+    
+    ```python
+    django-admin --version
+    ```
+    
+6. First django project
+    
+    ```python
+    django-admin startproject quiz
+    ```
+    
+7. Running the server
+    
+    ```python
+    py manage.py runserver
+    ```
+    
+8. Create first app
+    
+    ```python
+    py manage.py startapp Questions
     ```
