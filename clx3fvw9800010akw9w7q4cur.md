@@ -11,6 +11,8 @@ tags: guide, roadmap, roadmap-aspnet
 
 ---
 
+[https://roadmap.sh/aspnet-core](https://roadmap.sh/aspnet-core)
+
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1717689043685/4f29c93e-4c5d-44f3-bc22-4bdf867ac68b.jpeg align="center")
 
 For developers immersed in the Microsoft ecosystem, [ASP.NET](http://ASP.NET) Core has emerged as a powerful and flexible framework for building modern web applications. The intricate mind map before us offers a comprehensive overview of the various components and concepts that underpin this robust platform. At its core, we find the fundamental building blocks such as the HTTP/HTTPS protocols, data access layers, and the MVC (Model-View-Controller) architecture. Branching out from this foundation are the myriad libraries, tools, and technologies that enable developers to craft feature-rich and scalable web solutions. From Entity Framework for seamless data management to SignalR for real-time communication, the diagram illustrates the breadth of [ASP.NET](http://ASP.NET) Core's capabilities. Additionally, it highlights the importance of sound development practices, encompassing areas like coding standards, security protocols, and rigorous testing methodologies. Whether you're a seasoned [ASP.NET](http://ASP.NET) Core developer or embarking on your first project, this mind map serves as a valuable reference, encapsulating the framework's depth and versatility in a visually compelling format.
