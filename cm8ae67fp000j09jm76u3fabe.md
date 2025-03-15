@@ -216,7 +216,7 @@ public class OrdersController : ControllerBase
 Now, when you make a POST request to the API endpoint `/api/orders/process` with an order body:
 
 ```xml
-jsonCopy{
+{
   "OrderId": 1,
   "CustomerEmail": "customer@example.com",
   "TotalAmount": 99.99
