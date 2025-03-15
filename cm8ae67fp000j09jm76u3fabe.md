@@ -23,7 +23,7 @@ We have a system that processes orders. When an order is placed:
 
 We want to keep these services decoupled so we can easily swap them out or mock them for testing. This is where **Dependency Injection (DI)** comes into play.
 
-### 1\. **Step 1: Define Interfaces and Implementations**
+### 1. **Define Interfaces and Implementations**
 
 We'll start by defining the services that our order processing system will depend on.
 
@@ -82,7 +82,7 @@ public class LoggingService : ILoggingService
 }
 ```
 
-### 2\. **Step 2: Create the Order Model**
+### 2. **Create the Order Model**
 
 We'll create a simple `Order` model to pass data through the services.
 
@@ -95,7 +95,7 @@ public class Order
 }
 ```
 
-### 3\. **Step 3: Define the Order Processor**
+### 3. **Define the Order Processor**
 
 This is the main service that coordinates the different operations (payment, email, logging) when an order is placed.
 
@@ -143,7 +143,7 @@ public class OrderProcessor
 }
 ```
 
-### 4\. **Step 4: Register Services in the DI Container**
+### 4. **Register Services in the DI Container**
 
 Now, we need to register our services (`PaymentService`, `EmailService`, `LoggingService`) in the DI container so that they can be injected into the `OrderProcessor`.
 
@@ -182,7 +182,7 @@ app.MapControllers();
 app.Run();
 ```
 
-### 5\. **Step 5: Inject** `OrderProcessor` into a Controller
+### 5. **Inject** `OrderProcessor` into a Controller
 
 Now, let's use **constructor injection** to inject the `OrderProcessor` into a controller where we handle HTTP requests.
 
@@ -211,7 +211,7 @@ public class OrdersController : ControllerBase
 }
 ```
 
-### 6\. **Step 6: Example Request**
+### 6\. **Example Request**
 
 Now, when you make a POST request to the API endpoint `/api/orders/process` with an order body:
 
