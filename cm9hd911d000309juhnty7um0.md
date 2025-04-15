@@ -50,6 +50,17 @@ Let's start by setting up our project structure. We'll need the following compon
 5. Protected API endpoints
     
 
+## Required Packages
+
+Install following required packages
+
+1. Microsoft.EntityFrameworkCore.Tools
+    
+2. Microsoft.AspNetCore.Identity
+    
+3. Microsoft.AspNetCore.Authentication.JwtBearer
+    
+
 ## Step 1: Setting Up the User Model and DTOs
 
 First, let's create our user model by extending the IdentityUser class from [ASP.NET](http://ASP.NET) Core Identity:  
