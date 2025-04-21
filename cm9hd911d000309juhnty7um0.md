@@ -80,6 +80,12 @@ namespace Ecommerce.Models
 }
 ```
 
+Run migrations and update database:
+
+Go to package manager console :  
+*1\. add-migration “updated user module”  
+2\. update-database*
+
 Next, we'll need DTOs (Data Transfer Objects) for registration and login:  
 Create a Folder name ***DTOs/Auth/***
 
