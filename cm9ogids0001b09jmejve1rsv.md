@@ -315,3 +315,5 @@ html<!DOCTYPE html>
 </body>
 </html>
 ```
+
+To use static files on your project add ***app.UseStaticFiles()***; before ***app.run();***
