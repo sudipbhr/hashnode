@@ -45,7 +45,7 @@ dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer
 Update your `appsettings.json` file with the Google OAuth configuration:
 
 ```csharp
-json{
+{
   "Google": {
     "ClientId": "YOUR_GOOGLE_CLIENT_ID",
     "ClientSecret": "YOUR_GOOGLE_CLIENT_SECRET"
