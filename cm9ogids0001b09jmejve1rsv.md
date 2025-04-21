@@ -37,6 +37,7 @@ Before writing any code, you need to set up a project in the Google Cloud Consol
 Add the necessary NuGet packages to your project:
 
 ```csharp
+dotnet add package Google.Apis.Auth
 dotnet add package Microsoft.AspNetCore.Identity
 dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer
 ```
