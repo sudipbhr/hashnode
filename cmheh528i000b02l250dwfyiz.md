@@ -15,7 +15,7 @@ tags: calendar, nepalicalendarwidget
 ## Key Features of Digital Patro
 
 * **Ad-Free Experience**  
-    Enjoy a smooth, clean interface without annoying ads for uninterrupted use. Learn more about the ad-free experience on the [**home page**](https://digitalpatro.app/).  
+    Enjoy a smooth, clean interface without annoying ads for uninterrupted use. Learn more about the ad-free experience on the [digital patro’s home page](http://digitalpatro.app).
     
     ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1761894061052/9889b0c9-e60e-4855-b377-6378a6059abe.jpeg align="center")
     
