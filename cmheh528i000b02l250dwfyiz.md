@@ -20,12 +20,12 @@ tags: calendar, nepalicalendarwidget
     ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1761894061052/9889b0c9-e60e-4855-b377-6378a6059abe.jpeg align="center")
     
 * **Bikram Sambat (BS) & English (AD) Date Formats**  
-    Seamlessly switch between बिक्रम सङ्वत (बी एस)﻿ and Gregorian calendars and use the reliable [**date converter**](https://digitalpatro.app/date-converter/nepali-english-date-converter) tool for accurate conversions.  
+    Seamlessly switch between बिक्रम सङ्वत (बी एस)﻿ and Gregorian calendars and use the reliable [**date converter**](https://digitalpatro.app/date-converter) tool for accurate conversions.
     
     ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1761894047717/b0e2ff2a-bf2e-4432-ab5b-9b9f3e547813.jpeg align="center")
     
 * **Daily Weather & Horoscope (Rashifal)**  
-    Stay updated with the latest weather and get your daily, monthly, and yearly राशिफल﻿ on the dedicated [**horoscope page**](https://digitalpatro.app/horoscope/daily-horoscope).  
+    Stay updated with the latest weather and get your daily, monthly, and yearly राशिफल﻿ on the dedicated [**horoscope page**](https://digitalpatro.app/horoscope/daily-horoscope).
     
     ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1761894022425/5f0a5859-326c-4be8-878b-b46be75aa511.jpeg align="center")
     
