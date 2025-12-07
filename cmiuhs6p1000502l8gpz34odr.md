@@ -40,7 +40,7 @@ This guide explains how to set up and run .NET MAUI apps on **Windows** and **ma
 7. Run the app on Windows:
     
     ```plaintext
-    dotnet build -t:Run -f net9.0-windows10.0.19041.0
+    dotnet run -f net9.0-windows10.0.19041.0
     ```
     
     ## macOS Setup
