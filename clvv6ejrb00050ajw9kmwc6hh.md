@@ -83,6 +83,7 @@ tags: python, devops, install-django
     py manage.py startapp Questions
     ```
     
-    Promoting: [Digital Patro Nepali Calendar](https://digitalpatroapp.com)
+    Promoting: [Digital Patro Nepali Calendar](https://digitalpatroapp.com)  
+    Github: https://github.com/digitalpatro
     
     %[https://www.youtube.com/watch?v=2z3gAXiEoXQ]
