@@ -33,8 +33,7 @@ tags: python, devops, install-django
     python get-pip.py
     ```
     
-
-4. Creating a virtual environment
+3. Creating a virtual environment
     
     ```python
     py -m venv myworld
@@ -54,7 +53,7 @@ tags: python, devops, install-django
     source myworld/bin/activate
     ```
     
-5. Install Django
+4. Install Django
     
     ```python
     python -m pip install Django
@@ -66,20 +65,25 @@ tags: python, devops, install-django
     django-admin --version
     ```
     
-6. First django project
+5. First django project
     
     ```python
     django-admin startproject quiz
     ```
     
-7. Running the server
+6. Running the server
     
     ```python
     py manage.py runserver
     ```
     
-8. Create first app
+7. Create first app
     
     ```python
     py manage.py startapp Questions
     ```
+    
+      
+    Promoting: Digital Patro  
+    
+    %[https://www.youtube.com/watch?v=2z3gAXiEoXQ]
